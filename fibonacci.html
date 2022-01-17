@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DERET FIBONACCI by Kelompok 2</title>
+    <!-- JUDUL -->
+    <style type="text/css">
+        /* Membuat border / box */
+        main{
+            max-width: 100%;
+            /* Mengatur Maxsimal Ukuran*/
+            margin-left: 10%;
+            /* Mengatur margin kiri*/
+            border: 4px solid gray;
+            /* Ukuran border 4px solid warna abu"*/
+            border-radius: 10px 10px;
+            /* Ukuran border 4px solid warna abu"*/
+            width: 80%;
+            height: 100%;
+            /* Mengatur Ukuran */
+            text-align: center;
+            /* text di pindahkan ke tengah */
+            background-color: rgb(173, 230, 199);
+            /* background warna hijau cerah */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> MENAMPILKAN DERET FIBONACCI </h1>
+        <!-- Nama Judul -->
+        <form name="Fibonacci">
+        <!-- Membuat form yang bernama Fibonacci -->
+            <p></p>
+            Deret ke : <br>
+            <input type="text" name="deret">
+            <!-- Membuat input yang bernama deret -->
+            <br>
+            <input type="button" name="cek" value="CEK" onclick="Cek_Fibo();">
+            <!-- Membuat input tombol -->
+            <div>
+                <br>
+            Hasil Deret Fibonacci
+            <br>
+            <div id="hasil-output"></div>
+            <!-- Menampilkan hasil output -->
+            <br><br>
+            </div>
+        </form>
+        <!-- Setelah Membuat tampilannya maka lanjut ke java script -->
+ 
+        <script type="text/javascript">
+            function Cek_Fibo() { 
+            // Membuat function bernama Cek_Fibo
+                var deret = document.Fibonacci.deret.value; 
+                // Mengambil nilai input bernama deret yang berada pada form bernama Fibonacci
+                deret = parseInt(deret); 
+                // Merubah data string menjadi integer
+                var n1 = 0,  n2 = 1, next_num, i; //deklarasi variable 
+                var hasil = document.getElementById("hasil-output");
+                // membuat objek elemen
+                for ( i = 1; i <= deret; i++)  {  
+                    hasil.innerHTML = (" <br> " +  n1); // print the n1  
+                    // menampilkan output ke elemen hasil
+                    next_deret = n1 + n2; // menjumlahkan n1 + n2 ke next_deret  
+                    n1 = n2;   
+                    n2 = next_deret;   
+            }  
+            
+            }
+        </script>
+    </main>
+</body>
+</html>

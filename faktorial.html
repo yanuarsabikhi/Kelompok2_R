@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BILANGAN FAKTORIAL by Kelompok 2</title>
+    <!-- JUDUL -->
+    <style type="text/css">
+        /* Membuat border / box */
+        main{
+            max-width: 100%;
+            /* Mengatur Maxsimal Ukuran*/
+            margin-left: 10%;
+            /* Mengatur margin kiri*/
+            border: 4px solid gray;
+            /* Ukuran border 4px solid warna abu"*/
+            border-radius: 10px 10px;
+            /* Ukuran border 4px solid warna abu"*/
+            width: 80%;
+            height: 100%;
+            /* Mengatur Ukuran */
+            text-align: center;
+            /* text di pindahkan ke tengah */
+            background-color: rgb(173, 230, 199);
+            /* background warna hijau cerah */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> Perhitungan Faktorial </h1>
+        <!-- Nama Judul -->
+		<form>
+			<input type="" name="" id="input">
+			<button id="button">CEK</button>
+			<br><br>
+			<div id="hasiloutput"></div>
+			<br>
+		</form>
+		<script type="text/javascript">
+			var input = document.getElementById("input")
+			var button = document.getElementById("button")
+			var hasiloutput = document.getElementById("hasiloutput")
+	 
+			
+			button.addEventListener("click", function(e){
+				e.preventDefault()
+				var valInp = input.value;
+				var hasil = 1;
+				for(var i=valInp; i>0; i--){
+					hasil *=i;
+					
+				}
+				hasiloutput.innerHTML = `Hasil Faktorial Dari <strong> ${valInp} </strong> adalah <strong> ${hasil} </strong>`;
+			})
+		</script>
+	
+    </main>
+</body>
+</html>

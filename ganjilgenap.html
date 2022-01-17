@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MENENTUKAN BILANGAN GANJIL ATAU GENAP by Kelompok 2</title>
+    <!-- JUDUL -->
+    <style type="text/css">
+        /* Membuat border / box */
+        main{
+            max-width: 100%;
+            /* Mengatur Maxsimal Ukuran*/
+            margin-left: 10%;
+            /* Mengatur margin kiri*/
+            border: 4px solid gray;
+            /* Ukuran border 4px solid warna abu"*/
+            border-radius: 10px 10px;
+            /* Ukuran border 4px solid warna abu"*/
+            width: 80%;
+            height: 100%;
+            /* Mengatur Ukuran */
+            text-align: center;
+            /* text di pindahkan ke tengah */
+            background-color: rgb(173, 230, 199);
+            /* background warna hijau cerah */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> MENENTUKAN BILANGAN GANJIL ATAU GENAP </h1>
+        <!-- Nama Judul -->
+        <form name="GANJILGENAP">
+        <!-- Membuat form yang bernama GANJILGENAP -->
+            <p></p>
+            Masukkan Bilangan : <br>
+            <input type="text" name="bil" id="bil">
+            <!-- Membuat input yang bernama bilangan -->
+            <br>
+            <input type="button" name="cek" value="CEK" onclick="Cek_GanjilGenap();">
+            <!-- Membuat input tombol -->
+            <div>
+                <br>
+            Hasil Ganjil atau Genap
+            <br><br><strong>
+            <div id="hasil-output"></div>
+            <!-- Menampilkan hasil output -->
+            </strong>
+            <br><br>
+            </div>
+        </form>
+        <!-- Setelah Membuat tampilannya maka lanjut ke java script -->
+ 
+        <script>
+            //Penghitungan dan Pengecekan Hasil Modulo
+            function Cek_GanjilGenap(){
+                var bilangan = document.getElementById("bil").value
+                if(bilangan % 2 == 0)
+                    document.getElementById("hasil-output").innerText = "Bilangan Genap"
+                else
+                    document.getElementById("hasil-output").innerText = "Bilangan Ganjil"
+            }
+        </script>
+    </main>
+</body>
+</html>
