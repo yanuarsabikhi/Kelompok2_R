@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hitung Diskon</title>
+    <title>DERET FIBONACCI</title>
     <!-- JUDUL -->
     <style type="text/css">
         /* Membuat border / box */
@@ -26,25 +26,26 @@
 </head>
 <body>
     <main>
-        <h1> PENGHITUNGAN DISKON </h1>
+        <h1> MENAMPILKAN DERET FIBONACCI </h1>
         <!-- Nama Judul -->
         <form name="Diskon">
         <!-- Membuat form yang bernama Diskon -->
             <p></p>
-            Harga<br>
+            Deret ke : <br>
             <input type="text" name="harga">
-            <!-- Membuat input yang bernama harga -->
+            <!-- Membuat input yang bernama harga 
             <p></p>
             Persen<br>
             <input type="text" name="persen">
-            <!-- Membuat input yang bernama persen -->
+             Membuat input yang bernama persen -->
             <br>
             <input type="button" name="cek" value="CEK" onclick="Cek_Diskon();">
             <!-- Membuat input tombol -->
             <div>
-            Hasil Diskon
+            Hasil Deret Fibonacci
             <br>
-            <input type="text" name="hasil">
+            <div id="hasil-output"></div>
+            <!--<input type="text" name="hasil"-->
             <!-- Membuat colom text bernama hasil -->
             <p></p>
             </div>
@@ -56,18 +57,31 @@
             // Membuat function bernama Cek_Diskon
                 var harga = document.Diskon.harga.value; 
                 // Mengambil nilai input bernama harga yang berada pada form bernama Diskon
-                var persen = document.Diskon.persen.value; 
+                //var persen = document.Diskon.persen.value; 
                 // Mengambil nilai input bernama persen yang berada pada form bernama Diskon
                 harga = parseInt(harga); 
                 // Merubah data string menjadi integer
-                persen = parseInt(persen); 
+                //persen = parseInt(persen); 
                 // Merubah data string menjadi integer
-                var hasil = harga * (persen/100); 
+                //var hasil = harga * (persen/100); 
                 // Penghitungan nya (Persen/100) lalu kali harga
-                hasil = harga - parseInt(hasil); 
+                //hasil = harga - parseInt(hasil); 
                 // lalu hasil di kurangan harga
-                document.Diskon.hasil.value = hasil; 
+                //document.Diskon.hasil.value = hasil; 
                 // pindahkan nilai hasil ke input bernama hasil yang berada pada form Diskon
+                var n1 = 0,  n2 = 1, next_num, i;  
+                //var num = parseInt (prompt (" Enter the limit for Fibonacci Series "));  
+                var hasil = document.getElementById("hasil-output");
+                var num=document.Diskon.harga.value;
+                harga = parseInt(harga); 
+                //document.write( "Fibonacci Series: ");  
+                for ( i = 1; i <= num; i++)  {  
+                    hasil.innerHTML = (" <br> " +  n1); // print the n1  
+                    next_num = n1 + n2; // sum of n1 and n2 into the next_num  
+                    n1 = n2; // assign the n2 value into n2  
+                    n2 = next_num; // assign the next_num into n2  
+            }  
+            
             }
         </script>
     </main>
