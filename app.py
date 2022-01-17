@@ -5,7 +5,7 @@ application = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@application.route('/fibo')
+@application.route('/fibonacci')
 def fibo():
     return render_template('fibonacci.html')
 
