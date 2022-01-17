@@ -19,8 +19,8 @@
             /* Mengatur Ukuran */
             text-align: center;
             /* text di pindahkan ke tengah */
-            background-color: lightblue;
-            /* background warna biru cerah */
+            background-color: rgb(173, 230, 199);
+            /* background warna hijau cerah */
         }
     </style>
 </head>
@@ -28,58 +28,42 @@
     <main>
         <h1> MENAMPILKAN DERET FIBONACCI </h1>
         <!-- Nama Judul -->
-        <form name="Diskon">
-        <!-- Membuat form yang bernama Diskon -->
+        <form name="Fibonacci">
+        <!-- Membuat form yang bernama Fibonacci -->
             <p></p>
             Deret ke : <br>
-            <input type="text" name="harga">
-            <!-- Membuat input yang bernama harga 
-            <p></p>
-            Persen<br>
-            <input type="text" name="persen">
-             Membuat input yang bernama persen -->
+            <input type="text" name="deret">
+            <!-- Membuat input yang bernama deret -->
             <br>
-            <input type="button" name="cek" value="CEK" onclick="Cek_Diskon();">
+            <input type="button" name="cek" value="CEK" onclick="Cek_Fibo();">
             <!-- Membuat input tombol -->
             <div>
+                <br>
             Hasil Deret Fibonacci
             <br>
             <div id="hasil-output"></div>
-            <!--<input type="text" name="hasil"-->
-            <!-- Membuat colom text bernama hasil -->
-            <p></p>
+            <!-- Menampilkan hasil output -->
+            <br><br>
             </div>
         </form>
         <!-- Setelah Membuat tampilannya maka lanjut ke java script -->
  
         <script type="text/javascript">
-            function Cek_Diskon() { 
-            // Membuat function bernama Cek_Diskon
-                var harga = document.Diskon.harga.value; 
-                // Mengambil nilai input bernama harga yang berada pada form bernama Diskon
-                //var persen = document.Diskon.persen.value; 
-                // Mengambil nilai input bernama persen yang berada pada form bernama Diskon
-                harga = parseInt(harga); 
+            function Cek_Fibo() { 
+            // Membuat function bernama Cek_Fibo
+                var deret = document.Fibonacci.deret.value; 
+                // Mengambil nilai input bernama deret yang berada pada form bernama Fibonacci
+                deret = parseInt(deret); 
                 // Merubah data string menjadi integer
-                //persen = parseInt(persen); 
-                // Merubah data string menjadi integer
-                //var hasil = harga * (persen/100); 
-                // Penghitungan nya (Persen/100) lalu kali harga
-                //hasil = harga - parseInt(hasil); 
-                // lalu hasil di kurangan harga
-                //document.Diskon.hasil.value = hasil; 
-                // pindahkan nilai hasil ke input bernama hasil yang berada pada form Diskon
-                var n1 = 0,  n2 = 1, next_num, i;  
-                //var num = parseInt (prompt (" Enter the limit for Fibonacci Series "));  
+                var n1 = 0,  n2 = 1, next_num, i; //deklarasi variable 
                 var hasil = document.getElementById("hasil-output");
-                var num=document.Diskon.harga.value;
-                harga = parseInt(harga); 
-                //document.write( "Fibonacci Series: ");  
-                for ( i = 1; i <= num; i++)  {  
+                // membuat objek elemen
+                for ( i = 1; i <= deret; i++)  {  
                     hasil.innerHTML = (" <br> " +  n1); // print the n1  
-                    next_num = n1 + n2; // sum of n1 and n2 into the next_num  
-                    n1 = n2; // assign the n2 value into n2  
-                    n2 = next_num; // assign the next_num into n2  
+                    // menampilkan output ke elemen hasil
+                    next_deret = n1 + n2; // menjumlahkan n1 + n2 ke next_deret  
+                    n1 = n2;   
+                    n2 = next_deret;   
             }  
             
             }
